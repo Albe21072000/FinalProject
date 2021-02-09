@@ -14,7 +14,9 @@ public final class VisitorRecipe implements VisitorObjectToBeShipped<String>{
 		String recipe="Box that wheigs: " +box.calculateTotalWeight()+"Kg and contains: ";
 		Iterator<ObjectToBeShipped> iterator = box.iteatorForSons();
 		while(iterator.hasNext()) {
-			recipe+=iterator.next().accept(this);
+			recipe+=iterator
+					.next()
+					.accept(this);
 		}
 		return recipe;
 	}

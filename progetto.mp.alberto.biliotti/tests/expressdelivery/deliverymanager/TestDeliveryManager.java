@@ -107,7 +107,9 @@ public class TestDeliveryManager {
 		DeliveryManager manager=DeliveryManager.createDeliveryFromACollectionOfContainers(new ArrayList<>(),"Via Roma");
 		manager.getDeliveryContainers().add(box);
 		manager.getDeliveryContainers().add(anotherBox);
-		assertThat(manager.iterator()).toIterable().containsExactly(box, anotherBox);
+		assertThat(manager.iterator())
+		.toIterable()
+		.containsExactly(box, anotherBox);
 	}
 	@Test
 	public void testDeliveryRecipe() {

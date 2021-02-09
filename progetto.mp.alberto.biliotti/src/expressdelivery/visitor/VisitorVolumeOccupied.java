@@ -14,7 +14,9 @@ public class VisitorVolumeOccupied implements VisitorObjectToBeShipped<Double>{
 		double volumeOccupied=0;
 		Iterator<ObjectToBeShipped> iterator = box.iteatorForSons();
 		while(iterator.hasNext()) {
-			volumeOccupied+=iterator.next().accept(this);
+			volumeOccupied+=iterator
+					.next()
+					.accept(this);
 		}
 		return volumeOccupied;
 	}

@@ -13,7 +13,9 @@ public final class VisitorTotalPrice implements VisitorObjectToBeShipped<Integer
 		int totalPrice=0;
 		Iterator<ObjectToBeShipped> iterator = box.iteatorForSons();
 		while(iterator.hasNext()) {
-			totalPrice+=iterator.next().accept(this);
+			totalPrice+=iterator
+					.next()
+					.accept(this);
 		}
 		return totalPrice;
 	}

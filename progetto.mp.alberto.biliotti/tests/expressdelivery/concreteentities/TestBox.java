@@ -52,7 +52,9 @@ public class TestBox {
 		box.getBoxContent().add(pc);
 		box.getBoxContent().add(anotherBox);
 		box.getBoxContent().add(shockProofPackagingFoam);
-		assertThat(box.iteatorForSons()).toIterable().containsExactly(pc,anotherBox,shockProofPackagingFoam);
+		assertThat(box.iteatorForSons())
+		.toIterable()
+		.containsExactly(pc,anotherBox,shockProofPackagingFoam);
 	}
 	@Test
 	public void testRemoveFromBox() {

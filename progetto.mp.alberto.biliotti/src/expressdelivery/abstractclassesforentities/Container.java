@@ -9,8 +9,8 @@ public abstract class Container extends ObjectToBeShipped {
 
 	private Collection<ObjectToBeShipped> boxContent = new ArrayList<>();
 
-	public Container(double weight) {
-		super(weight);
+	public Container(double weightInKG) {
+		super(weightInKG);
 	}
 
 	public boolean addObjectToBeShipped(ObjectToBeShipped objectToBeShipped) {

@@ -23,7 +23,9 @@ public final class Box extends Container{
 		Iterator<ObjectToBeShipped> iterator=super.iteatorForSons();
 		double totalweight=super.getWeightInKG();
 		while(iterator.hasNext()) {
-			totalweight+=iterator.next().calculateTotalWeight();
+			totalweight+=iterator
+					.next()
+					.calculateTotalWeight();
 		}
 		return totalweight;
 	}

@@ -4,15 +4,15 @@ import expressdelivery.visitor.VisitorObjectToBeShipped;
 
 public abstract class ObjectToBeShipped {
 
-	private double weightInKG;
+	private double weight;
 
 	public ObjectToBeShipped(double weight) {
-		this.weightInKG=weight;
+		this.weight=weight;
 	}
 
 
 	protected double getWeightInKG() {
-		return weightInKG;
+		return weight;
 	}
 
 

@@ -55,7 +55,9 @@ public class DeliveryManager {
 		double totalWheight=0;
 		Iterator<Container> iterator=this.iterator();
 		while (iterator.hasNext()) {
-			totalWheight+=iterator.next().calculateTotalWeight();
+			totalWheight+=iterator
+					.next()
+					.calculateTotalWeight();
 
 		}
 		return totalWheight;
@@ -65,7 +67,9 @@ public class DeliveryManager {
 		double totalvalue=0;
 		Iterator<Container> iterator=this.iterator();
 		while (iterator.hasNext()) {
-			totalvalue+=iterator.next().accept(new VisitorTotalPrice());
+			totalvalue+=iterator
+					.next()
+					.accept(new VisitorTotalPrice());
 		}
 		return totalvalue;
 	}
@@ -74,7 +78,9 @@ public class DeliveryManager {
 		double totalVolume=0;
 		Iterator<Container> iterator=this.iterator();
 		while (iterator.hasNext()) {
-			totalVolume+=iterator.next().accept(new VisitorVolumeOccupied());
+			totalVolume+=iterator
+					.next()
+					.accept(new VisitorVolumeOccupied());
 		}
 		return totalVolume;
 	}
@@ -83,7 +89,9 @@ public class DeliveryManager {
 		String recipe="Delivery to "+ deliveryAddress+" that contains: ";
 		Iterator<Container> iterator=this.iterator();
 		while (iterator.hasNext()) {
-			recipe+=iterator.next().accept(new VisitorRecipe());
+			recipe+=iterator
+					.next()
+					.accept(new VisitorRecipe());
 		}
 		return recipe;
 	}
